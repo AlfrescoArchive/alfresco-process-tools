@@ -7,6 +7,7 @@ branches:
   only:
     - master
     - develop
+    - /.*release.*/
 stages:
   - name: build
   - name: test
