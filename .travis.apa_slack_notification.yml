@@ -1,0 +1,11 @@
+notifications:
+  slack:
+    - rooms:
+        - secure: "gZrtnXGlTMEs0dm6W9D9stCMoQGR+uW0ajSgI0LBRVVv7pwJtS4Pr6qwFSHVg/iEQi0c8Zz9PCJ1eoSeAiMOFMgihM30EsggmCMEiPsFKaQNiH8RCtP6Ob0QlDejFtswTFsMyxse2RuMsUn+EfaDXrkvTPYy3JYi75703k4Rn3E45Nubh+BRMknl2oKjzdZK3H5u1GjuTsCKyaqlUKbXq1ApuTu1MffqXmlr9yaqXN0kITt8kddaObBTpYg6WWF6i/C9aztqcZA7pu+Nb/6XobSFoS4sZJcWaj/OGRx6NrrQYddgI7UhNQuLF4hhrLpPWEOWf2BK80rcsmmLmOPwT1YCo8U4uzwZ/CPNUb5h0V0QJkc0jGD72rqlqhTG1u8PXXoBGXrL5UWKDB7lGJ93G/fCxSaiavggqEi/ntg4UIJ4hHBWHwziPWv5ztwhneYVHqLwNrVTUbDAMF8hdHEIoY2ZUm4oJEsU83l8LHG3jJObb3nPp72sjdrKWDoQLUK7SXxPfOR8HEwujfyr/piEJFBzvNonSlzqZHIpj9fCjRyY11ELMcU4Lq9U6Bp7vrbVFApUW+ONrDFLARpcI+4teW25/vr3/X/YX652CuRREX9T/Av/u+ksGJMLLJJpTTWIl+fuVs9kYwY0bXcig/AXfpqqgH8KcA6aR5GN8X51dyA="
+      on_pull_requests: false
+      on_failure: always
+      on_success: change
+      template:
+        - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
+        - "Author: %{author} Execution time: *%{duration}*"
+        - "Message: %{message}"
