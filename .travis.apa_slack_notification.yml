@@ -4,7 +4,7 @@ notifications:
         - secure: "bvitP4FofS4GDuKon7t+dqBq9PXATA38Wfh2LaP4RdCzOzugKp97vuLybKs9ia1gAojOfwh6UEPZvGivw4hdxjAMYtE0GEKJHwQ2EKzoV35ctGkLuXp4lzOs7F0oRGfb3bsjqAqi1CovD9BsB0sizfCPS4L/O3tBU+zF/bmx/Bp6HA28wDDpdj0N7EEksYBbM1aE0MH7J5F8cQyec1ci6MmmQYcHsMKxMfFgZn1WATTcSEMriEnKioaXH3VMd1FjdrqCIv+qRjgikNj9IUP767k6DoEGdfGEoUUNHoI9Uns01tQ55dez5983842nYzxYvBmpp68hpRda8wukG/l2gQ0mH5JhzTSPalAiKtaYmsXmXrSfQ6qgAmWbO2Er4zu5csSkSu8ppkuDNtJwusTTYwSk18WPJZEC4oR3JIBMbII1EzC4XVKaIzWBRZgat/NaMHGNMZi0JIYMeQT2cg6U7JoUj9VradUlRhG/c457zhuacVRoRNVA4XYmvc2PO4Odb3py/k43vJ4280TQy7lKxuQRbAc5bGsyemEuB5DUpSOI9OwkvGOqPlzUClesb7tXE0UzOsFdQEgCyPisSciBkQDS4+1gsDmqCPeDtSh9CgBtH8Lm1+/I6/H89PyWDXztP2zLw1lUbcjwvjaHRPEg8aELihjwkvjSxNe1DwQcWiw="
       on_pull_requests: false
       on_failure: always
-      on_success: change
+      on_success: always
       template:
         - "Repo `%{repository_slug}` *%{result}* build (<%{build_url}|#%{build_number}>) for commit (<%{compare_url}|%{commit}>) on branch `%{branch}`."
         - "Author: %{author} Execution time: *%{duration}*"
