@@ -1,3 +1,8 @@
+- id: travis-yml-lint
+  name: Travis Lint
+  entry: bash -c "for FILE in $@; do docker run --rm -v $(pwd):/project caktux/travis-cli lint $FILE; done"
+  language: system
+  files: \.travis.*\.y(a?)ml$
 - id: helm-deps
   name: Helm Dependency Update
   entry: bash -c 'find helm -mindepth 1 -maxdepth 1 -type d | xargs -t -n1 -I% helm dep up %'

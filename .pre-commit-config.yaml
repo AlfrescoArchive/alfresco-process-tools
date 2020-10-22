@@ -1,8 +1,5 @@
 repos:
-  - repo: local
+  - repo: https://github.com/Alfresco/alfresco-process-tools
+    rev: share-pre-commit
     hooks:
       - id: travis-yml-lint
-        name: Travis Lint
-        entry: bash -c "for FILE in $@; do docker run --rm -v $(pwd):/project caktux/travis-cli lint $FILE; done"
-        language: system
-        files: \.travis.*\.y(a?)ml$
