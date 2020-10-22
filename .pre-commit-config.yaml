@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: travis-yml-lint
+        name: Travis Lint
+        entry: bash -c "for FILE in $@; do docker run --rm -v $(pwd):/project caktux/travis-cli lint $FILE; done"
+        language: system
+        files: \.travis.*\.y(a?)ml$
