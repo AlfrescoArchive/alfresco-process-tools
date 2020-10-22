@@ -1,4 +1,5 @@
 import:
+  - source: .travis.common.yml
   - source: .travis.pre-commit.yml
 branches:
   only:
