@@ -1,5 +1,5 @@
 repos:
   - repo: https://github.com/Alfresco/alfresco-process-tools
-    rev: 62e8804
+    rev: master
     hooks:
       - id: travis-yml-lint
